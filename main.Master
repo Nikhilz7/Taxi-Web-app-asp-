@@ -1,0 +1,157 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.Master.cs" Inherits="taxi.Site1"  %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%//links %>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+	<link href="css/linearicons.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/nice-select.css">							
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">			
+	<link rel="stylesheet" href="css/main.css">
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+		<header id="header">
+		  		<div class="header-top">
+				</div>
+			    <div class="container main-menu">
+			    	<div class="row align-items-center justify-content-between d-flex">
+			    		<a href="index.aspx"><img src="img/logo.png" alt="" title="" /></a>		
+						<nav id="nav-menu-container">
+							<ul class="nav-menu">
+							
+							  <li class="menu-active">
+								 <a href="index.aspx">Home</a>
+							  </li>
+								<li id="">
+									<asp:HyperLink ID="loginlink" runat="server" NavigateUrl="~/login.aspx">Login</asp:HyperLink>
+								  <%--<a href="login.aspx">Login</a>--%>
+								</li>
+								<li id="">
+									<asp:HyperLink ID="signuplink" runat="server" NavigateUrl="~/signup.aspx">SignUp</asp:HyperLink>
+									<%--<a href="signup.aspx">SignUp</a>--%>
+								</li>
+								<li id="">
+									<asp:HyperLink ID="bookingslink" runat="server" NavigateUrl="~/bookings.aspx">My Bookings</asp:HyperLink>
+									<%--<a href="bookings.aspx">My Bookins</a>--%>
+								</li>
+								<li id="">
+									<asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" OnClick="logout">Logout</asp:LinkButton>
+									<%--<asp:HyperLink ID="logoutlink" runat="server" NavigateUrl="~/bookings.aspx">Logout</asp:HyperLink>--%>
+								  <%--<a href="bookings.aspx">Logout</a>--%>
+								</li>
+						
+							
+							</ul>
+						</nav>
+						<!-- #nav-menu-container -->		
+			    	</div>
+			    </div>
+			  </header>
+	<!-- #header -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+	<!-- footer-->
+		<!-- start footer Area -->		
+			<footer class="footer-area section-gap">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-2 col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>Quick links</h6>
+								<ul>
+									<li><a href="#">Jobs</a></li>
+									<li><a href="#">Brand Assets</a></li>
+									<li><a href="#">Investor Relations</a></li>
+									<li><a href="#">Terms of Service</a></li>
+								</ul>								
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>Features</h6>
+								<ul>
+									<li><a href="#">Jobs</a></li>
+									<li><a href="#">Brand Assets</a></li>
+									<li><a href="#">Investor Relations</a></li>
+									<li><a href="#">Terms of Service</a></li>
+								</ul>								
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>Resources</h6>
+								<ul>
+									<li><a href="#">Guides</a></li>
+									<li><a href="#">Research</a></li>
+									<li><a href="#">Experts</a></li>
+									<li><a href="#">Agencies</a></li>
+								</ul>								
+							</div>
+						</div>												
+						<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+							<div class="single-footer-widget">
+								<h6>Follow Us</h6>
+								<p>Let us be social</p>
+								<div class="footer-social d-flex align-items-center">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+									<a href="#"><i class="fa fa-instagram"></i></a>
+								</div>
+							</div>
+						</div>							
+						<div class="col-lg-4  col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>Newsletter</h6>
+								<p>Stay update with our latest</p>
+								<div class="" id="mc_embed_signup">
+									<form target="_blank" action="#" method="get" class="form-inline">
+										<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
+			                            	<button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
+			                            	<div style="position: absolute; left: -5000px;">
+												<input name="sub_email" tabindex="-1" value="" type="text">
+											</div>
+
+										<div class="info"></div>
+									</form>
+								</div>
+							</div>
+						</div>	
+						<p class="mt-80 mx-auto footer-text col-lg-12">
+							Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  
+						</p>											
+					</div>
+				</div>
+				<img class="footer-bottom" src="img/footer-bottom.png" alt="">
+			</footer>	
+			<!-- End footer Area -->
+	<!-- js links-->
+    </form>
+	<script src="js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>			
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  	<script src="js/easing.min.js"></script>			
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.min.js"></script>	
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>	
+ 	<script src="js/jquery-ui.js"></script>								
+	<script src="js/jquery.nice-select.min.js"></script>							
+	<script src="js/mail-script.js"></script>	
+	<script src="js/main.js"></script>
+
+</body>
+</html>
