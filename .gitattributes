@@ -4,3 +4,4 @@
 *.css linguist-detectable=false
 *.scss linguist-detectable=false
 *.xml linguist-detectable=false
+*.sass linguist-detectable=false
